@@ -28,9 +28,7 @@ import pandas as pd
 data=pd.read_csv('spam.csv',encoding='Windows-1252')
 
 data.head()
-
 data.info()
-
 data.isnull().sum()
 
 x=data["v1"].values
@@ -41,7 +39,6 @@ x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=0.35,random_state=0
 
 from sklearn.feature_extraction.text import CountVectorizer
 cv=CountVectorizer()
-
 x_train=cv.fit_transform(x_train)
 x_test=cv.transform(x_test)
 
